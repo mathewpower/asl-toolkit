@@ -27,3 +27,13 @@ jobs:
         run: poetry run mypy .
       - name: Run Linter
         run: poetry run flake8
+
+  codacy-analysis-cli:
+    name: Codacy Analysis CLI
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@main
+
+      - name: Run Codacy Analysis CLI
+        uses: codacy/codacy-analysis-cli-action@master
