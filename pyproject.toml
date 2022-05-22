@@ -9,7 +9,37 @@ license = "MIT"
 python = "^3.7"
 
 [tool.poetry.dev-dependencies]
+pytest = "^7.1.2"
+mypy = "^0.950"
+flake8 = "^4.0.1"
+pytest-cov = "^3.0.0"
 
+[tool.pytest.ini_options]
+pythonpath = "."
+
+addopts = [
+  "--maxfail=1",
+  "--junitxml=report.xml",
+  "-vv",
+  "-s",
+  "--log-cli-level=ERROR",
+  "--cov=asl_toolkit",
+  "--cov-fail-under=100",
+  "--cov-report=term-missing",
+]
+
+
+[tool.mypy]
+ignore_missing_imports = true
+disallow_untyped_defs = true
+
+
+
+
+[[tool.mypy.overrides]]
+module = ["*.tests.*"]
+disallow_untyped_defs = false
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+

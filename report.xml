@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="0" hostname="Mathews-MacBook-Pro.local" name="pytest" skipped="0" tests="1" time="0.103" timestamp="2022-05-22T21:20:30.944078"><testcase classname="asl_toolkit.tests.test_example" name="test_add_two_integers" time="0.002" /></testsuite></testsuites>
